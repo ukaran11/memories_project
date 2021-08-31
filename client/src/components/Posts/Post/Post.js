@@ -16,12 +16,12 @@ const Post = ({ post }) => {
                 <Typography variant="h6">{post.creator}</Typography>
                 <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
             </div>
-            <div className={classed.overlay2}>
+            <div className={classes.overlay2}>
                 <Button 
                     style={{color:'white'}} 
                     size="small" 
                     onClick={()=> {}} >
-                        <MoreHorizIcon fontSize="default"/>
+                        <MoreHorizIcon fontSize="medium"/>
                 </Button>
             </div>
             <div className={classes.details}>
@@ -34,6 +34,17 @@ const Post = ({ post }) => {
                     { post.message }
                 </Typography>
             </CardContent>
+            <CardActions>
+                <Button size="small" color="primary" onClick={() => {}}>
+                    <ThumbUpAltIcon fontSize="small" />
+                    Like
+                    { post.likeCount }
+                </Button>
+                <Button size="small" color="primary" onClick={() => {}}>
+                    <DeleteIcon fontSize="small" />
+                    Delete
+                </Button>
+            </CardActions>
         </Card>
     );
 }
