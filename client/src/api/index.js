@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/posts';
-
+// const url = 'http://localhost:5000/posts';  // LOCAL
+const url = 'https://memories-project-mern-appl.herokuapp.com/posts';  // PROD
 export const fetchPosts = () => {
     return axios.get(url);
 }
